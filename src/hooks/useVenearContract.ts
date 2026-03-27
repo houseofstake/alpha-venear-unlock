@@ -125,7 +125,7 @@ export function useVenearContract() {
               request_type: "call_function",
               finality: "final",
               account_id: lockupAccountId,
-              method_name: "get_venear_liquid_balance",
+              method_name: "get_liquid_owners_balance",
               args_base64: Buffer.from(JSON.stringify({})).toString("base64"),
             }),
           ]);
@@ -295,7 +295,7 @@ export function useVenearContract() {
           request_type: "call_function",
           finality: "final",
           account_id: lockupAccountId,
-          method_name: "get_venear_liquid_balance",
+          method_name: "get_liquid_owners_balance",
           args_base64: Buffer.from(JSON.stringify({})).toString("base64"),
         });
         const exactLiquidBalance = JSON.parse(
