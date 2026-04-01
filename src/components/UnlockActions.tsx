@@ -48,7 +48,7 @@ export function UnlockActions({
   const [showTransferConfirm, setShowTransferConfirm] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
-  const threshold = Big(10).pow(24); // 1 NEAR
+  const threshold = Big(0); // 0 NEAR threshold, any balance allows actions
   const hasLocked = Big(lockedBalance).gt(threshold);
   const hasPending = Big(pendingBalance).gt(threshold);
   const hasLiquid = Big(liquidBalance || "0").gt(threshold);
